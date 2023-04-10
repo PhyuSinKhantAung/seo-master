@@ -13,7 +13,7 @@ export default function Hero({ navData, heroData }) {
             <div className="lg:w-1/2 lg:text-start text-center lg:mb-0 mb-10 flex flex-col gap-y-6">
               <Typography
                 variant="h2"
-                className="text-3xl xl:text-5xl"
+                className="text-3xl xl:text-4xl"
                 fontWeight={700}
               >
                 {heroData.title}
