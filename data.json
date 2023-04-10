@@ -1,0 +1,195 @@
+{
+  "navData": [
+    { "name": "Home", "href": "/", "submenu": false },
+
+    { "name": "About", "href": "/", "submenu": false },
+
+    { "name": "Services", "href": "/", "submenu": false },
+
+    { "name": "Projects", "href": "/", "submenu": false },
+
+    {
+      "name": "Pages",
+      "href": "/",
+      "submenu": true,
+      "sublinks": [
+        { "name": "Our Teams", "href": "/" },
+        { "name": "Testimonials", "href": "/" }
+      ]
+    },
+
+    { "name": "Contact", "href": "/", "submenu": false }
+  ],
+
+  "heroData": {
+    "title": "All in one SEO tool need to grow your business rapidly",
+    "paragraph": "Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit justo amet ipsum vero ipsum clita lorem",
+    "heroImg": "/images/seo-1.svg",
+    "btnText": "Free Quote",
+    "btnText2": "Contact Us"
+  },
+
+  "aboutData": {
+    "title": "About us",
+    "subtitle": "The best SEO solution with 10 years of experience",
+    "paragraph": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet",
+    "achievements": [
+      "Award Winning",
+      "Professional Staff",
+      "24/7 Support",
+      "Fair Prices"
+    ],
+    "btnText": "Read More",
+    "aboutImg1": "/images/seo-2.svg",
+    "aboutImg2": "/images/seo-3.svg"
+  },
+
+  "servicesData": {
+    "title": "Our Services",
+    "subtitle": "What Solutions We Provide",
+    "ourServices": [
+      {
+        "id": "service1",
+        "title": "SEO Optimization",
+        "text": "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.",
+        "btnText": "Read More"
+      },
+      {
+        "id": "service2",
+        "title": "Web Design",
+        "text": "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.",
+        "btnText": "Read More"
+      },
+      {
+        "id": "service3",
+        "title": "Social Media Marketing",
+        "text": "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.",
+        "btnText": "Read More"
+      },
+      {
+        "id": "service4",
+        "title": "Email Marketing",
+        "text": "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.",
+        "btnText": "Read More"
+      },
+      {
+        "id": "service5",
+        "title": "PPC Advertising",
+        "text": "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.",
+        "btnText": "Read More"
+      },
+      {
+        "id": "service6",
+        "title": "App Development",
+        "text": "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.",
+        "btnText": "Read More"
+      }
+    ]
+  },
+
+  "projectsData": {
+    "title": "Our Projects",
+    "subtitle": "Recently Launched Projects",
+    "categories": ["All", "Design", "Development"],
+    "ourProjects": [
+      {
+        "id": "project1",
+        "name": "Project name1",
+        "category": "development",
+        "img": "/images/project-1.jpg"
+      },
+      {
+        "id": "project2",
+        "name": "Project name2",
+        "category": "design",
+        "img": "/images/project-2.jpg"
+      },
+      {
+        "id": "project3",
+        "name": "Project name3",
+        "category": "design",
+        "img": "/images/project-3.jpg"
+      },
+      {
+        "id": "project4",
+        "name": "Project name4",
+        "category": "development",
+        "img": "/images/project-4.jpg"
+      },
+      {
+        "id": "project5",
+        "name": "Project name5",
+        "category": "design",
+        "img": "/images/project-5.jpg"
+      },
+      {
+        "id": "project6",
+        "name": "Project name6",
+        "category": "development",
+        "img": "/images/project-6.jpg"
+      }
+    ]
+  },
+  "testimonialsData": {
+    "clients": [
+      {
+        "id": "client1",
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus nesciunt voluptates, perferendis laborum eveniet sunt molestias.",
+        "image": "/images/client-1.png",
+        "name": "Isak Pettersson"
+      },
+      {
+        "id": "client2",
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus nesciunt voluptates, perferendis laborum eveniet sunt molestias.",
+        "image": "/images/client-2.png",
+        "name": "Simon Sandberg"
+      },
+      {
+        "id": "client3",
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus nesciunt voluptates, perferendis laborum eveniet sunt molestias.",
+        "image": "/images/client-3.png",
+        "name": "Melissa Doe"
+      },
+      {
+        "id": "client4",
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus nesciunt voluptates, perferendis laborum eveniet sunt molestias.",
+        "image": "/images/client-4.png",
+        "name": "Mr.John"
+      },
+      {
+        "id": "client5",
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus nesciunt voluptates, perferendis laborum eveniet sunt molestias.",
+        "image": "/images/client-5.png",
+        "name": "Mrs.Rose"
+      },
+      {
+        "id": "client6",
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus nesciunt voluptates, perferendis laborum eveniet sunt molestias.",
+        "image": "/images/client-6.png",
+        "name": "Peter Tricky"
+      }
+    ]
+  },
+
+  "teamsData": {
+    "title": "Our Team",
+    "subtitle": "Meet Our Team Members",
+    "members": [
+      {
+        "name": "Jhon Doe",
+        "position": "CEO",
+        "img": "/images/team-1.jpg"
+      },
+      {
+        "name": "Emma William",
+        "position": "Manager",
+        "img": "/images/team-2.jpg"
+      },
+      {
+        "name": "Noah Michael",
+        "position": "Designer",
+        "img": "/images/team-3.jpg"
+      }
+    ]
+  }
+}
