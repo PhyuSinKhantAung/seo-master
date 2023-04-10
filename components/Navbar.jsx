@@ -7,7 +7,7 @@ export default function Navbar({ navData }) {
     <nav className="flex items-center">
       <ul className="flex gap-x-10">
         {navData.map((item) => (
-          <li key={item.name}>
+          <li key={item.name} className="hover:text-gray-400">
             {item.submenu ? (
               <NavLinks item={item} />
             ) : (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import SearchIcon from "@mui/icons-material/Search";
 import { Typography } from "@mui/material";
@@ -10,14 +10,25 @@ import NavbarMobile from "./NavbarMobile";
 export default function Header({ navData, heroData }) {
   const [header, setHeader] = useState(false);
   const [navMobile, setNavMobile] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 100 ? setHeader(true) : setHeader(false);
+    });
+  });
 
   return (
     <header
       className={`${
-        header ? "bg-white p-3 shadow-lg" : "py-6"
-      }  fixed left-0 right-0 flex justify-between items-center w-full mx-auto max-w-[90vw] lg:max-w-[1120px] z-20 transition-all duration-500`}
+        header ? "bg-white text-black p-3 shadow-lg" : "text-white p-6"
+      }  shadow-lg fixed left-0 right-0 flex justify-between items-center 
+      w-full mx-auto max-w-full z-20 transition-all duration-300`}
     >
-      <Link href="/" className="flex items-center">
+      <Link
+        href="/"
+        className={`${
+          header ? "text-primary" : "text-secondary"
+        } flex items-center`}
+      >
         <SearchIcon sx={{ fontSize: "4rem" }}></SearchIcon>
         <Typography variant="h4" fontWeight={700}>
           SEO
@@ -39,7 +50,10 @@ export default function Header({ navData, heroData }) {
         className="lg:hidden cursor-pointer"
         onClick={() => setNavMobile(!navMobile)}
       >
-        <MenuIcon sx={{ fontSize: "2rem" }}></MenuIcon>
+        <MenuIcon
+          sx={{ fontSize: "2rem" }}
+          className={`${header && "text-primary"}`}
+        ></MenuIcon>
       </div>
 
       {/* nav mobile collapse */}
