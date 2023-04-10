@@ -17,7 +17,7 @@ export async function getStaticProps() {
 
 export default function Home() {
   return (
-    <div className="bg-blue-200 overflow-hidden max-w-[1600px] mx-auto ">
+    <div className="bg-blue-50 overflow-hidden max-w-[1600px] mx-auto ">
       <Hero navData={navData} heroData={heroData}></Hero>
     </div>
   );
