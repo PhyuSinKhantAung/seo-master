@@ -12,7 +12,7 @@ export default function Header({ navData, heroData }) {
   const [navMobile, setNavMobile] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      window.scrollY > 100 ? setHeader(true) : setHeader(false);
+      window.scrollY > 60 ? setHeader(true) : setHeader(false);
     });
   });
 
