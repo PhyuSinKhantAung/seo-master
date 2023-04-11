@@ -1,8 +1,3 @@
-// import Image from 'next/image'
-// import { Inter } from 'next/font/google'
-
-// const inter = Inter({ subsets: ['latin'] })
-
 import About from "@/components/About";
 import Hero from "../components/Hero";
 import { navData, heroData, aboutData } from "../data.json";
