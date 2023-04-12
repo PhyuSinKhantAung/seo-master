@@ -8,7 +8,7 @@ export default function Services({ servicesData }) {
       <div className="text-center">
         <Heading>{servicesData}</Heading>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 md:p-8 md:gap-6 p-4 gap-4">
+      <div className="lg:w-4/5 mx-auto grid md:grid-cols-2 md:p-8 md:gap-6 p-4 gap-4">
         {servicesData.ourServices.map((item) => (
           <div
             key={item.id}
