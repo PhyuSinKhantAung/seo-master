@@ -12,11 +12,13 @@ export default function NavLinks({ item }) {
           onClick={() => {
             heading !== item.name ? setHeading(item.name) : setHeading("");
           }}
+          className="hover:text-gray-400"
         >
           {item.name}
           <ExpandMoreIcon></ExpandMoreIcon>
         </span>
 
+        {/* For Pc */}
         <div>
           <div className="absolute top-19 hidden hover:lg:block group-hover:lg:block ">
             <div className="bg-white text-black rounded-md py-1 px-3 ">

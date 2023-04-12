@@ -4,7 +4,7 @@
 
     { "name": "About", "href": "/about", "submenu": false },
 
-    { "name": "Services", "href": "/", "submenu": false },
+    { "name": "Services", "href": "/services", "submenu": false },
 
     { "name": "Projects", "href": "/", "submenu": false },
 

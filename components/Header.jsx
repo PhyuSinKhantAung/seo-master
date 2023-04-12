@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import SearchIcon from "@mui/icons-material/Search";
+import MenuIcon from "@mui/icons-material/Menu";
 import { Typography } from "@mui/material";
 import Navbar from "./Navbar";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 import NavbarMobile from "./NavbarMobile";
+import Button from "./ui/Button";
 
 export default function Header({ navData, heroData }) {
   const [header, setHeader] = useState(false);
+
   const [navMobile, setNavMobile] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 60 ? setHeader(true) : setHeader(false);
@@ -30,22 +32,22 @@ export default function Header({ navData, heroData }) {
         } flex items-center`}
       >
         <SearchIcon sx={{ fontSize: "4rem" }}></SearchIcon>
+
         <Typography variant="h4" fontWeight={700}>
           SEO
         </Typography>
+
         <Typography variant="h6">Master</Typography>
       </Link>
 
-      {/* nav for pc */}
       <div className="lg:flex hidden gap-x-6 items-center">
         <Navbar navData={navData}></Navbar>
+
         <SearchIcon className="text-paleBlue"></SearchIcon>
-        <button className="px-4 py-2 bg-paleBlue rounded-3xl">
-          Pro Version
-        </button>
+
+        <Button>Pro Version</Button>
       </div>
 
-      {/* nav btn for mobile */}
       <div
         className="lg:hidden cursor-pointer"
         onClick={() => setNavMobile(!navMobile)}
@@ -56,17 +58,16 @@ export default function Header({ navData, heroData }) {
         ></MenuIcon>
       </div>
 
-      {/* nav mobile collapse */}
       <div
         className={`${
           navMobile ? "max-h-[500px]" : "max-h-0"
-        } lg:hidden bg-white text-black absolute top-full mt-2 w-full left-0 rounded-md overflow-hidden shadow-2xl  transition-all duration-500`}
+        } lg:hidden bg-white text-black absolute top-full mt-2 w-full left-0 rounded-md overflow-hidden shadow-2xl transition-all duration-500`}
       >
         <NavbarMobile navData={navData} />
-        <SearchIcon className="mx-4"></SearchIcon>
-        <button className="px-4 py-2 m-2 bg-paleBlue rounded-3xl text-white">
-          Pro Version
-        </button>
+
+        <SearchIcon className="mx-4 my-5"></SearchIcon>
+
+        <Button>Pro Version</Button>
       </div>
     </header>
   );

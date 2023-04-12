@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import Hero from "../components/Hero";
-import { navData, heroData, aboutData } from "../data.json";
+import Services from "../components/Services";
+import { navData, heroData, aboutData, servicesData } from "../data.json";
 
 export async function getStaticProps() {
   return {
@@ -8,15 +9,17 @@ export async function getStaticProps() {
       navData,
       heroData,
       aboutData,
+      servicesData,
     },
   };
 }
 
-export default function Home({ navData, heroData, aboutData }) {
+export default function Home({ navData, heroData, aboutData, servicesData }) {
   return (
     <div className="overflow-hidden max-w-[1600px] mx-auto ">
       <Hero navData={navData} heroData={heroData}></Hero>
       <About aboutData={aboutData}></About>
+      <Services servicesData={servicesData}></Services>
     </div>
   );
 }

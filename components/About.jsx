@@ -10,6 +10,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
+import Button from "./ui/Button";
 
 export default function About({ aboutData }) {
   return (
@@ -42,10 +43,8 @@ export default function About({ aboutData }) {
             ))}
           </div>
           <div className="flex items-center gap-x-4 my-4">
-            <button className="py-2 px-4 bg-primary text-white rounded-full">
-              Read more
-            </button>
-            <div className="flex gap-x-2 text-xl text-primary">
+            <Button isPrimary={true}>Read more</Button>
+            <div className="flex gap-x-2 text-xl text-primary cursor-pointer">
               <FaFacebookF />
               <FaTwitter />
               <FaInstagram />
@@ -78,7 +77,7 @@ export default function About({ aboutData }) {
                 placeholder="Enter Your Email"
                 className="relative text-black rounded-full py-3 px-4 md:w-[32rem]"
               />
-              <SendIcon className="absolute text-primary top-2 right-8 md:right-4 -rotate-45"></SendIcon>
+              <SendIcon className="absolute text-primary top-2 right-8 md:right-4 -rotate-45 cursor-pointer"></SendIcon>
             </div>
           </div>
           <div className="hidden lg:inline h-64">
