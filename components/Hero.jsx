@@ -7,7 +7,7 @@ export default function Hero({ navData, heroData }) {
     <>
       <section className="bg-primary min-h-screen">
         <div className="container mx-auto relative min-h-screen">
-          <Header navData={navData} heroData={heroData}></Header>\
+          <Header navData={navData} heroData={heroData}></Header>
           <HeroBody heroData={heroData}></HeroBody>
         </div>
       </section>
