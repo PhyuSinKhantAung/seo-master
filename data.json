@@ -2,9 +2,9 @@
   "navData": [
     { "name": "Home", "href": "/", "submenu": false },
 
-    { "name": "About", "href": "/", "submenu": false },
+    { "name": "About", "href": "/about", "submenu": false },
 
-    { "name": "Services", "href": "/", "submenu": false },
+    { "name": "Services", "href": "/services", "submenu": false },
 
     { "name": "Projects", "href": "/", "submenu": false },
 
@@ -30,7 +30,7 @@
   },
 
   "aboutData": {
-    "title": "About us",
+    "title": "About Us",
     "subtitle": "The best SEO solution with 10 years of experience",
     "paragraph": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet",
     "achievements": [
@@ -40,8 +40,7 @@
       "Fair Prices"
     ],
     "btnText": "Read More",
-    "aboutImg1": "/images/seo-2.svg",
-    "aboutImg2": "/images/seo-3.svg"
+    "aboutImg": "/images/seo-1.svg"
   },
 
   "servicesData": {
