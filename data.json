@@ -6,7 +6,7 @@
 
     { "name": "Services", "href": "/services", "submenu": false },
 
-    { "name": "Projects", "href": "/", "submenu": false },
+    { "name": "Projects", "href": "/projects", "submenu": false },
 
     {
       "name": "Pages",
@@ -89,7 +89,7 @@
   "projectsData": {
     "title": "Our Projects",
     "subtitle": "Recently Launched Projects",
-    "categories": ["All", "Design", "Development"],
+    "categories": ["all", "design", "development"],
     "ourProjects": [
       {
         "id": "project1",

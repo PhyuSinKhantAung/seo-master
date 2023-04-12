@@ -6,7 +6,7 @@ export default function Heading({ children }) {
   const { title, subtitle } = children;
 
   return (
-    <>
+    <div className="my-10">
       <AppsIcon className="text-primary text-base inline-block my-4 mr-2"></AppsIcon>
       <Typography
         variant="caption"
@@ -21,6 +21,6 @@ export default function Heading({ children }) {
         <div className=" w-16 h-1 bg-black"></div>
         <div className=" w-1 h-1 bg-black"></div>
       </div>
-    </>
+    </div>
   );
 }
