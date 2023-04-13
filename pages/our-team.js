@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import Teams from "@/components/Teams";
 import React from "react";
 
-import { navData, heroData, teamsData } from "../data.json";
+import { navData, heroData, teamsData, footerData } from "../data.json";
+import Footer from "@/components/Footer";
 
 export async function getStaticProps() {
   return {
@@ -10,11 +11,12 @@ export async function getStaticProps() {
       navData,
       heroData,
       teamsData,
+      footerData,
     },
   };
 }
 
-export default function services({ navData, heroData, teamsData }) {
+export default function services({ navData, heroData, teamsData, footerData }) {
   return (
     <div className="overflow-hidden max-w-[1600px] mx-auto ">
       <section className="bg-primary min-h-fit">
@@ -34,6 +36,7 @@ export default function services({ navData, heroData, teamsData }) {
         ></path>
       </svg>
       <Teams teamsData={teamsData}></Teams>
+      <Footer footerData={footerData}></Footer>
     </div>
   );
 }

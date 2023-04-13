@@ -1,7 +1,9 @@
 import React from "react";
-import About from "@/components/About";
-import Header from "@/components/Header";
-import { navData, heroData, aboutData } from "../data.json";
+import About from "../components/About";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+import { navData, heroData, aboutData, footerData } from "../data.json";
 
 export async function getStaticProps() {
   return {
@@ -9,11 +11,17 @@ export async function getStaticProps() {
       navData,
       heroData,
       aboutData,
+      footerData,
     },
   };
 }
 
-export default function AboutPage({ aboutData, navData, heroData }) {
+export default function AboutPage({
+  aboutData,
+  navData,
+  heroData,
+  footerData,
+}) {
   return (
     <div className="overflow-hidden max-w-[1600px] mx-auto ">
       <section className="bg-primary min-h-fit">
@@ -33,6 +41,7 @@ export default function AboutPage({ aboutData, navData, heroData }) {
         ></path>
       </svg>
       <About aboutData={aboutData}></About>
+      <Footer footerData={footerData}></Footer>
     </div>
   );
 }

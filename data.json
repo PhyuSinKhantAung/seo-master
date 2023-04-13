@@ -201,5 +201,13 @@
         "img": "/images/team-3.jpg"
       }
     ]
+  },
+  "footerData": {
+    "titles": ["Get In Touch", "Popular Link", "Project Gallery", "Newsletter"],
+    "getInTouch": ["123 Street, New York, USA", "+012 345 67890", "mail@domain.com"],
+    "popularLink": ["about us", "contact us", "privacy policy", "terms & condition", "career"],
+    "projectGallery": ["/images/project-1.jpg", "/images/project-2.jpg", "/images/project-3.jpg","/images/project-4.jpg", "/images/project-5.jpg", "/images/project-6.jpg"],
+    "newsLetter": "Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu",
+    "assets": ["home", "cookies", "help", "faqs"]
   }
 }
