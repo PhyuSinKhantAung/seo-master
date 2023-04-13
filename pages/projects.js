@@ -2,8 +2,9 @@ import Header from "@/components/Header";
 import Services from "@/components/Services";
 import React from "react";
 
-import { navData, heroData, projectsData } from "../data.json";
+import { navData, heroData, projectsData, footerData } from "../data.json";
 import Projects from "@/components/Projects";
+import Footer from "@/components/Footer";
 
 export async function getStaticProps() {
   return {
@@ -11,11 +12,17 @@ export async function getStaticProps() {
       navData,
       heroData,
       projectsData,
+      footerData,
     },
   };
 }
 
-export default function services({ navData, heroData, projectsData }) {
+export default function services({
+  navData,
+  heroData,
+  projectsData,
+  footerData,
+}) {
   return (
     <div className="overflow-hidden max-w-[1600px] mx-auto ">
       <section className="bg-primary min-h-fit">
@@ -35,6 +42,7 @@ export default function services({ navData, heroData, projectsData }) {
         ></path>
       </svg>
       <Projects projectsData={projectsData}></Projects>
+      <Footer footerData={footerData}></Footer>
     </div>
   );
 }

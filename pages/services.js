@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import Services from "@/components/Services";
 import React from "react";
 
-import { navData, heroData, servicesData } from "../data.json";
+import { navData, heroData, servicesData, footerData } from "../data.json";
+import Footer from "@/components/Footer";
 
 export async function getStaticProps() {
   return {
@@ -10,11 +11,17 @@ export async function getStaticProps() {
       navData,
       heroData,
       servicesData,
+      footerData,
     },
   };
 }
 
-export default function services({ navData, heroData, servicesData }) {
+export default function services({
+  navData,
+  heroData,
+  servicesData,
+  footerData,
+}) {
   return (
     <div className="overflow-hidden max-w-[1600px] mx-auto ">
       <section className="bg-primary min-h-fit">
@@ -34,6 +41,7 @@ export default function services({ navData, heroData, servicesData }) {
         ></path>
       </svg>
       <Services servicesData={servicesData}></Services>
+      <Footer footerData={footerData}></Footer>
     </div>
   );
 }
