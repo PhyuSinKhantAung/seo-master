@@ -18,7 +18,7 @@
       ]
     },
 
-    { "name": "Contact", "href": "/", "submenu": false }
+    { "name": "Contact", "href": "/contact", "submenu": false }
   ],
 
   "heroData": {
@@ -202,6 +202,12 @@
       }
     ]
   },
+
+  "contactData": {
+    "title": "Contact Us",
+    "subtitle": "Contact For Any Query"
+  },
+
   "footerData": {
     "titles": ["Get In Touch", "Popular Link", "Project Gallery", "Newsletter"],
     "getInTouch": ["123 Street, New York, USA", "+012 345 67890", "mail@domain.com"],
