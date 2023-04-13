@@ -13,8 +13,8 @@
       "href": "/",
       "submenu": true,
       "sublinks": [
-        { "name": "Our Teams", "href": "/" },
-        { "name": "Testimonials", "href": "/" }
+        { "name": "Testimonials", "href": "/testimonials" },
+        { "name": "Our Teams", "href": "/" }
       ]
     },
 
@@ -130,42 +130,50 @@
     ]
   },
   "testimonialsData": {
+    "title": "Testimonials",
+    "subtitle": "What our clients say",
     "clients": [
       {
         "id": "client1",
-        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus nesciunt voluptates, perferendis laborum eveniet sunt molestias.",
-        "image": "/images/client-1.png",
-        "name": "Isak Pettersson"
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus.",
+        "image": "/images/client-1.jpg",
+        "name": "Isak Pettersson",
+        "position": "Profession"
       },
       {
         "id": "client2",
-        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus nesciunt voluptates, perferendis laborum eveniet sunt molestias.",
-        "image": "/images/client-2.png",
-        "name": "Simon Sandberg"
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus.",
+        "image": "/images/client-2.jpg",
+        "name": "Simon Sandberg",
+        "position": "Profession"
       },
       {
         "id": "client3",
-        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus nesciunt voluptates, perferendis laborum eveniet sunt molestias.",
-        "image": "/images/client-3.png",
-        "name": "Melissa Doe"
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus.",
+        "image": "/images/client-3.jpg",
+        "name": "Melissa Doe",
+        "position": "Profession"
       },
       {
         "id": "client4",
-        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus nesciunt voluptates, perferendis laborum eveniet sunt molestias.",
-        "image": "/images/client-4.png",
-        "name": "Mr.John"
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus.",
+        "image": "/images/client-4.jpg",
+        "name": "Mr.John",
+        "position": "Profession"
       },
       {
         "id": "client5",
-        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus nesciunt voluptates, perferendis laborum eveniet sunt molestias.",
-        "image": "/images/client-5.png",
-        "name": "Mrs.Rose"
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus.",
+        "image": "/images/client-5.jpg",
+        "name": "Mrs.Rose",
+        "position": "Profession"
       },
       {
         "id": "client6",
-        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus nesciunt voluptates, perferendis laborum eveniet sunt molestias.",
-        "image": "/images/client-6.png",
-        "name": "Peter Tricky"
+        "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint modi minima qui vero inventore dolores ad alias nisi, fugit explicabo totam porro doloribus.",
+        "image": "/images/client-6.jpg",
+        "name": "Peter Tricky",
+        "position": "Profession"
       }
     ]
   },
