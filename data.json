@@ -14,7 +14,7 @@
       "submenu": true,
       "sublinks": [
         { "name": "Testimonials", "href": "/testimonials" },
-        { "name": "Our Teams", "href": "/" }
+        { "name": "Our Team", "href": "/our-team" }
       ]
     },
 
@@ -183,16 +183,19 @@
     "subtitle": "Meet Our Team Members",
     "members": [
       {
+        "id": "member1",
         "name": "Jhon Doe",
         "position": "CEO",
         "img": "/images/team-1.jpg"
       },
       {
+        "id": "member2",
         "name": "Emma William",
         "position": "Manager",
         "img": "/images/team-2.jpg"
       },
       {
+        "id": "member3",
         "name": "Noah Michael",
         "position": "Designer",
         "img": "/images/team-3.jpg"
