@@ -3,12 +3,8 @@ import Testimonials from "@/components/Testimonials";
 import Heading from "../components/ui/Heading";
 import React from "react";
 
-import {
-  navData,
-  heroData,
-  servicesData,
-  testimonialsData,
-} from "../data.json";
+import { navData, heroData, testimonialsData, footerData } from "../data.json";
+import Footer from "@/components/Footer";
 
 export async function getStaticProps() {
   return {
@@ -16,11 +12,17 @@ export async function getStaticProps() {
       navData,
       heroData,
       testimonialsData,
+      footerData,
     },
   };
 }
 
-export default function services({ navData, heroData, testimonialsData }) {
+export default function services({
+  navData,
+  heroData,
+  testimonialsData,
+  footerData,
+}) {
   return (
     <div className="overflow-hidden max-w-[1600px] mx-auto ">
       <section className="bg-primary min-h-fit">
@@ -43,6 +45,7 @@ export default function services({ navData, heroData, testimonialsData }) {
         <Heading>{testimonialsData}</Heading>
       </div>
       <Testimonials testimonialsData={testimonialsData}></Testimonials>
+      <Footer footerData={footerData}></Footer>
     </div>
   );
 }

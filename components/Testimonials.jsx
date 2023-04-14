@@ -18,12 +18,12 @@ export default function Testimonials({ testimonialsData }) {
   SwiperCore.use([Autoplay]);
 
   return (
-    <div className="bg-primary p-20 my-10">
+    <div className="bg-primary px-6 py-20 my-10">
       <div className="w-full lg:w-4/5 mx-auto">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={50}
-          slidesPerView={3}
+          slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
@@ -33,17 +33,29 @@ export default function Testimonials({ testimonialsData }) {
             delay: 3000,
           }}
           loop
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1000: {
+              slidesPerView: 3,
+            },
+          }}
+          className="h-72 lg:h-80"
         >
           {testimonialsData.clients.map((client) => (
             <SwiperSlide key={client.id}>
-              <div className="bg-white p-4 rounded-lg ">
-                <FaQuoteLeft className="text-3xl"></FaQuoteLeft>
-                <p>{client.message}</p>
+              <div className="bg-white p-6 rounded-lg flex flex-col gap-y-4 text-sm">
+                <FaQuoteLeft className="text-3xl text-primary"></FaQuoteLeft>
+                <p className="text-gray-400">{client.message}</p>
                 <div className="flex">
                   <Avatar alt={client.name} src={client.image} />
-                  <div>
+                  <div className="mx-4">
                     <h1>{client.name}</h1>
-                    <span>{client.position}</span>
+                    <span className="text-gray-400">{client.position}</span>
                   </div>
                 </div>
               </div>

@@ -14,11 +14,11 @@
       "submenu": true,
       "sublinks": [
         { "name": "Testimonials", "href": "/testimonials" },
-        { "name": "Our Teams", "href": "/" }
+        { "name": "Our Team", "href": "/our-team" }
       ]
     },
 
-    { "name": "Contact", "href": "/", "submenu": false }
+    { "name": "Contact", "href": "/contact", "submenu": false }
   ],
 
   "heroData": {
@@ -183,20 +183,37 @@
     "subtitle": "Meet Our Team Members",
     "members": [
       {
+        "id": "member1",
         "name": "Jhon Doe",
         "position": "CEO",
         "img": "/images/team-1.jpg"
       },
       {
+        "id": "member2",
         "name": "Emma William",
         "position": "Manager",
         "img": "/images/team-2.jpg"
       },
       {
+        "id": "member3",
         "name": "Noah Michael",
         "position": "Designer",
         "img": "/images/team-3.jpg"
       }
     ]
+  },
+
+  "contactData": {
+    "title": "Contact Us",
+    "subtitle": "Contact For Any Query"
+  },
+
+  "footerData": {
+    "titles": ["Get In Touch", "Popular Link", "Project Gallery", "Newsletter"],
+    "getInTouch": ["123 Street, New York, USA", "+012 345 67890", "mail@domain.com"],
+    "popularLink": ["about us", "contact us", "privacy policy", "terms & condition", "career"],
+    "projectGallery": ["/images/project-1.jpg", "/images/project-2.jpg", "/images/project-3.jpg","/images/project-4.jpg", "/images/project-5.jpg", "/images/project-6.jpg"],
+    "newsLetter": "Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu",
+    "assets": ["home", "cookies", "help", "faqs"]
   }
 }
