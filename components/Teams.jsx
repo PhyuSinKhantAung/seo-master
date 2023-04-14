@@ -14,9 +14,9 @@ export default function Teams({ teamsData }) {
         <Heading>{teamsData}</Heading>
       </div>
       <div
-        className="w-full gap-y-20 flex flex-col p-6 mb-20
+        className="w-full gap-y-20 grid-cols-1 p-6 mb-20
 
-      lg:flex-row md:mx-auto lg:flex md:w-4/5 justify-center"
+      mx-auto  md:w-4/5 grid md:grid-cols-2 lg:grid-cols-3"
       >
         {teamsData.members.map((member) => (
           <div
