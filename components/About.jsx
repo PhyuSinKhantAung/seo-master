@@ -11,12 +11,59 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import Button from "./ui/Button";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const scrollUpVariants = {
+  hidden: {
+    y: 500,
+  },
+  visible: {
+    y: 0,
+    transition: {
+      duration: 1.5,
+      type: "spring",
+      stiffness: 20,
+    },
+  },
+};
+
+const fadeZoomInVariants = {
+  hidden: {
+    scale: 0.5,
+  },
+  visible: {
+    scale: 1,
+    transition: {
+      duration: 1,
+      type: "tween",
+    },
+  },
+};
 
 export default function About({ aboutData }) {
   return (
     <div>
-      <div className="grid lg:grid-cols-2 items-center w-full px-4  xl:w-4/5 mx-auto my-6">
-        <div className="col-span-1">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="grid lg:grid-cols-2 items-center w-full px-4  xl:w-4/5 mx-auto my-6"
+      >
+        <motion.div variants={scrollUpVariants} className="col-span-1">
           <AppsIcon className="text-primary text-base inline-block my-4 mr-2"></AppsIcon>
           <Typography
             variant="caption"
@@ -51,16 +98,19 @@ export default function About({ aboutData }) {
               <FaLinkedinIn />
             </div>
           </div>
-        </div>
-        <div className="col-span-1 flex justify-center">
+        </motion.div>
+        <motion.div
+          variants={fadeZoomInVariants}
+          className="col-span-1 flex justify-center"
+        >
           <Image
             src={aboutData.aboutImg}
             alt="seo-illustration-image"
             width={500}
             height={500}
           ></Image>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <div className="bg-primary text-white py-4 w-full my-10 lg:my-32 flex justify-center">
         <div className="flex items-center w-4/5 lg:justify-between justify-center">

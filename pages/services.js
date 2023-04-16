@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Services from "@/components/Services";
 import React from "react";
+import { motion } from "framer-motion";
 
 import { navData, heroData, servicesData, footerData } from "../data.json";
 import Footer from "@/components/Footer";
@@ -16,6 +17,18 @@ export async function getStaticProps() {
   };
 }
 
+const pageTextContainerVariants = {
+  hidden: {
+    scale: 0.5,
+  },
+  visible: {
+    scale: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
 export default function services({
   navData,
   heroData,
@@ -25,12 +38,17 @@ export default function services({
   return (
     <div className="overflow-hidden max-w-[1600px] mx-auto ">
       <section className="bg-primary min-h-fit">
-        <div className="container mx-auto relative min-h-fit">
+        <div className="container mx-auto relative ">
           <Header navData={navData} heroData={heroData}></Header>
-          <h1 className="pt-40 mb-2 text-center text-3xl  text-white">
+          <motion.h1
+            variants={pageTextContainerVariants}
+            initial="hidden"
+            animate="visible"
+            className=" mb-2 text-center pt-60 text-3xl screen text-white"
+          >
             {servicesData.title}
-          </h1>
-          <div className="w-20 h-[1px] bg-white mx-auto bg-opacity-25"></div>
+          </motion.h1>
+          <div className="w-20  h-[1px] bg-white mx-auto bg-opacity-25"></div>
         </div>
       </section>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

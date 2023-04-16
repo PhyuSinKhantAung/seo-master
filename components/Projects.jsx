@@ -3,6 +3,61 @@ import Heading from "./ui/Heading";
 import Image from "next/image";
 import AddIcon from "@mui/icons-material/Add";
 import FolderIcon from "@mui/icons-material/Folder";
+import { motion, scroll } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const scrollUpVariants = {
+  hidden: {
+    y: 500,
+  },
+  visible: {
+    y: 0,
+    transition: {
+      duration: 1.5,
+      type: "spring",
+      stiffness: 20,
+    },
+  },
+};
+
+const fadeZoomInVariants = {
+  hidden: {
+    scale: 0.5,
+  },
+  visible: {
+    scale: 1,
+    transition: {
+      duration: 1,
+      type: "tween",
+    },
+  },
+};
+
+const childContainerVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 1,
+      duration: 1,
+      staggerChildren: 0.5,
+    },
+  },
+};
 
 export default function Projects({ projectsData }) {
   const allProjects = projectsData.ourProjects;
@@ -23,31 +78,45 @@ export default function Projects({ projectsData }) {
   };
 
   return (
-    <div>
-      <div className="text-center">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <motion.div variants={scrollUpVariants} className="text-center">
         <Heading>{projectsData}</Heading>
-      </div>
+      </motion.div>
 
-      <div className="text-center my-4  transition-all duration-300">
-        {projectsData.categories.map((category, index) => (
-          <button
-            key={category}
-            onClick={() => {
-              setValue(index);
-              filteredProjects(category);
-            }}
-            className={`${
-              index === value ? "bg-primary text-white" : "bg-gray-200 "
-            } lg:mx-2 px-7 py-2 mx-1 capitalize rounded-md cursor-pointer hover:bg-primary hover:text-white transition-all duration-500`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+      <motion.div variants={scrollUpVariants}>
+        <div className="text-center my-4  transition-all duration-300">
+          {projectsData.categories.map((category, index) => (
+            <button
+              key={category}
+              onClick={() => {
+                setValue(index);
+                filteredProjects(category);
+              }}
+              className={`${
+                index === value ? "bg-primary text-white" : "bg-gray-200 "
+              } lg:mx-2 px-7 py-2 mx-1 capitalize rounded-md cursor-pointer hover:bg-primary hover:text-white transition-all duration-500`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </motion.div>
 
-      <div className="lg:w-4/5 mx-auto grid md:grid-cols-2 xl:grid-cols-3 md:p-8 md:gap-6 p-4 gap-4">
+      <motion.div
+        variants={childContainerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="lg:w-4/5 mx-auto grid md:grid-cols-2 xl:grid-cols-3 md:p-8 md:gap-6 p-4 gap-4"
+      >
         {projects.map((project) => (
-          <div
+          <motion.div
+            variants={fadeZoomInVariants}
             key={project.id}
             className="group relative col-span-1 cursor-pointer"
           >
@@ -73,9 +142,9 @@ export default function Projects({ projectsData }) {
                 <h1 className="text-2xl font-semibold">{project.name}</h1>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
