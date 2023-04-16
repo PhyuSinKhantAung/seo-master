@@ -1,11 +1,27 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Typography } from "@mui/material";
 import Navbar from "./Navbar";
 import NavbarMobile from "./NavbarMobile";
 import Button from "./ui/Button";
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    y: -250,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      type: "tween",
+    },
+  },
+};
 
 export default function Header({ navData, heroData }) {
   const [header, setHeader] = useState(false);
@@ -19,11 +35,14 @@ export default function Header({ navData, heroData }) {
   });
 
   return (
-    <header
+    <motion.header
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
       className={`${
         header ? "bg-white text-black p-3 shadow-lg" : "text-white p-6"
-      }  shadow-lg fixed left-0 right-0 flex justify-between items-center 
-      w-full mx-auto max-w-full z-20 transition-all duration-300`}
+      } shadow-lg fixed left-0 right-0 flex justify-between items-center 
+      w-full mx-auto max-w-full z-20`}
     >
       <Link
         href="/"
@@ -69,6 +88,6 @@ export default function Header({ navData, heroData }) {
 
         <Button>Pro Version</Button>
       </div>
-    </header>
+    </motion.header>
   );
 }

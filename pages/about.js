@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import About from "../components/About";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -16,6 +17,18 @@ export async function getStaticProps() {
   };
 }
 
+const pageTextContainerVariants = {
+  hidden: {
+    scale: 0.5,
+  },
+  visible: {
+    scale: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
 export default function AboutPage({
   aboutData,
   navData,
@@ -23,13 +36,18 @@ export default function AboutPage({
   footerData,
 }) {
   return (
-    <div className="overflow-hidden max-w-[1600px] mx-auto ">
+    <div className="overflow-hidden max-w-[1600px] mx-auto">
       <section className="bg-primary min-h-fit">
         <div className="container mx-auto relative min-h-fit">
           <Header navData={navData} heroData={heroData}></Header>
-          <h1 className="pt-40 mb-2 text-center text-3xl  text-white">
+          <motion.h1
+            className="pt-60 mb-2 text-center text-3xl text-white"
+            variants={pageTextContainerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {aboutData.title}
-          </h1>
+          </motion.h1>
           <div className="w-20 h-[1px] bg-white mx-auto bg-opacity-25"></div>
         </div>
       </section>
