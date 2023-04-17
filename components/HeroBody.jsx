@@ -1,58 +1,13 @@
-import { Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
-
-const containerVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.2,
-      duration: 1.5,
-    },
-  },
-};
-
-const childrenVariants = {
-  hidden: {
-    scale: 0.5,
-    opacity: 0,
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      duration: 1,
-    },
-  },
-};
-
-const leftButtonVariants = {
-  hidden: {
-    x: -300,
-  },
-  visible: {
-    x: 0,
-    transition: {
-      duration: 1.5,
-    },
-  },
-};
-
-const rightButtonVariants = {
-  hidden: {
-    x: 300,
-  },
-  visible: {
-    x: 0,
-    transition: {
-      duration: 1.5,
-    },
-  },
-};
+import { heroVariants } from "../constants";
+const {
+  containerVariants,
+  childrenVariants,
+  leftButtonVariants,
+  rightButtonVariants,
+} = heroVariants;
 
 export default function HeroBody({ heroData }) {
   return (
