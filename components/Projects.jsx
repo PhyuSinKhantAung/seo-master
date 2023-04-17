@@ -108,15 +108,11 @@ export default function Projects({ projectsData }) {
       </motion.div>
 
       <motion.div
-        variants={childContainerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+        variants={scrollUpVariants}
         className="lg:w-4/5 mx-auto grid md:grid-cols-2 xl:grid-cols-3 md:p-8 md:gap-6 p-4 gap-4"
       >
         {projects.map((project) => (
-          <motion.div
-            variants={fadeZoomInVariants}
+          <div
             key={project.id}
             className="group relative col-span-1 cursor-pointer"
           >
@@ -142,7 +138,7 @@ export default function Projects({ projectsData }) {
                 <h1 className="text-2xl font-semibold">{project.name}</h1>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </motion.div>
     </motion.div>
