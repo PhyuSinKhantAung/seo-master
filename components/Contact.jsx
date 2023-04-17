@@ -2,33 +2,8 @@ import React from "react";
 import Heading from "./ui/Heading";
 import { Button, TextField } from "@mui/material";
 import { motion } from "framer-motion";
-
-const containerVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const scrollUpVariants = {
-  hidden: {
-    y: 500,
-  },
-  visible: {
-    y: 0,
-    transition: {
-      duration: 1.5,
-      type: "spring",
-      stiffness: 20,
-    },
-  },
-};
+import { globalVariants } from "../constants";
+const { containerVariants, scrollUpVariants } = globalVariants;
 
 export default function Contact({ contactData }) {
   return (

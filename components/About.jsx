@@ -12,46 +12,9 @@ import {
 } from "react-icons/fa";
 import Button from "./ui/Button";
 import { motion } from "framer-motion";
-
-const containerVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const scrollUpVariants = {
-  hidden: {
-    y: 500,
-  },
-  visible: {
-    y: 0,
-    transition: {
-      duration: 1.5,
-      type: "spring",
-      stiffness: 20,
-    },
-  },
-};
-
-const fadeZoomInVariants = {
-  hidden: {
-    scale: 0.5,
-  },
-  visible: {
-    scale: 1,
-    transition: {
-      duration: 1,
-      type: "tween",
-    },
-  },
-};
+import { globalVariants } from "../constants";
+const { containerVariants, scrollUpVariants, fadeZoomInVariants } =
+  globalVariants;
 
 export default function About({ aboutData }) {
   return (

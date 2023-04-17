@@ -23,7 +23,7 @@ const containerVariants = {
   },
 };
 
-export default function Header({ navData, heroData }) {
+export default function Header({ navData }) {
   const [header, setHeader] = useState(false);
 
   const [navMobile, setNavMobile] = useState(false);

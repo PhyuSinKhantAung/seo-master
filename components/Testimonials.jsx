@@ -8,60 +8,8 @@ import "swiper/css/autoplay";
 import { FaQuoteLeft } from "react-icons/fa";
 import { Avatar } from "@mui/material";
 import { motion } from "framer-motion";
-
-const containerVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const scrollUpVariants = {
-  hidden: {
-    y: 500,
-  },
-  visible: {
-    y: 0,
-    transition: {
-      duration: 1.5,
-      type: "spring",
-      stiffness: 20,
-    },
-  },
-};
-
-const fadeZoomInVariants = {
-  hidden: {
-    scale: 0.5,
-  },
-  visible: {
-    scale: 1,
-    transition: {
-      duration: 1,
-      type: "tween",
-    },
-  },
-};
-
-const childContainerVariants = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 1,
-      duration: 1,
-      staggerChildren: 0.5,
-    },
-  },
-};
+import { globalVariants } from "../constants";
+const { containerVariants, scrollUpVariants } = globalVariants;
 
 export default function Testimonials({ testimonialsData }) {
   SwiperCore.use([Autoplay]);
