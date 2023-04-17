@@ -1,12 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, {
-  Autoplay,
-  Pagination,
-  Navigation,
-  Scrollbar,
-  A11y,
-} from "swiper";
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
@@ -85,14 +79,11 @@ export default function Testimonials({ testimonialsData }) {
         className="w-full lg:w-4/5 mx-auto"
       >
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={50}
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
           autoplay={{
             delay: 3000,
           }}

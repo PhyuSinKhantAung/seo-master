@@ -79,7 +79,6 @@ export default function HeroBody({ heroData }) {
           <motion.Typography
             variants={childrenVariants}
             variant="h6"
-            paragraph
             className="text-base xl:text-xl"
           >
             {heroData.paragraph}
