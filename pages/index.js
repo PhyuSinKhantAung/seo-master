@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import About from "../components/About";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
@@ -43,14 +45,19 @@ export default function Home({
   footerData,
 }) {
   return (
-    <div className="overflow-hidden max-w-[1600px] mx-auto bg-gray-50 text-black">
-      <Hero navData={navData} heroData={heroData}></Hero>
-      <About aboutData={aboutData}></About>
-      <Services servicesData={servicesData}></Services>
-      <Projects projectsData={projectsData}></Projects>
-      <Testimonials testimonialsData={testimonialsData}></Testimonials>
-      <Teams teamsData={teamsData}></Teams>
-      <Footer footerData={footerData}></Footer>
+    <div>
+      <Head>
+        <title>Seo Master | Landing Page</title>
+      </Head>
+      <div className="overflow-hidden max-w-[1600px] mx-auto bg-gray-50 text-black">
+        <Hero navData={navData} heroData={heroData}></Hero>
+        <About aboutData={aboutData}></About>
+        <Services servicesData={servicesData}></Services>
+        <Projects projectsData={projectsData}></Projects>
+        <Testimonials testimonialsData={testimonialsData}></Testimonials>
+        <Teams teamsData={teamsData}></Teams>
+        <Footer footerData={footerData}></Footer>
+      </div>
     </div>
   );
 }
